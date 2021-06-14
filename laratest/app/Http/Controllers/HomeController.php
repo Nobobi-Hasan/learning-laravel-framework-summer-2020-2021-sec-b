@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function index(Request $req){
         
         // $name = 'alamin';
         // $id = '1234';
@@ -17,8 +17,16 @@ class HomeController extends Controller
         //         ->with('id', '12')
         //         ->with('name', 'alamin');
 
-        return view('home.index')
+        if($req->session()->has('uname'))
+        {
+            return view('home.index')
                  ->withId('12')
                  ->withName('xyz');
+        }
+        else{
+            $req->session()->flash('msg', 'Unauthorized request');
+            return redirect('/login');
+        }
+        
     }
 }

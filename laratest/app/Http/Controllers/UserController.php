@@ -98,7 +98,8 @@ class UserController extends Controller
         return [
             ['id'=>1, 'name'=>'almain', 'email'=>'email@email.com'],
             ['id'=>2, 'name'=>'abc', 'email'=>'abc@email.com'],
-            ['id'=>3, 'name'=>'xyz', 'email'=>'xyz@email.com']
+            ['id'=>3, 'name'=>'xyz', 'email'=>'xyz@email.com'],
+            ['id'=>4, 'name'=>'jkl', 'email'=>'jkl@email.com']
         ];
     }
 }
